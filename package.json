@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/lucastaliberti/codefights/issues"
   },
-  "homepage": "https://github.com/lucastaliberti/codefights#readme"
+  "homepage": "https://github.com/lucastaliberti/codefights#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
 }
