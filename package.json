@@ -1,0 +1,20 @@
+{
+  "name": "codefights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "add.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucastaliberti/codefights.git"
+  },
+  "keywords": [],
+  "author": "Lucas Taliberti <lucastaliberti@syllus.com.br> (https://github.com/lucastaliberti)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucastaliberti/codefights/issues"
+  },
+  "homepage": "https://github.com/lucastaliberti/codefights#readme"
+}
