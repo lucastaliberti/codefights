@@ -23,6 +23,8 @@ Guaranteed constraints:
 
 The sum of the two inputs.
 */
+'use strict';
+var expect = require('chai').expect;
 
 function add(param1, param2) {
     return param1 + param2

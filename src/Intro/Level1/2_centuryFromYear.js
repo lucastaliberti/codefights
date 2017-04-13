@@ -21,7 +21,15 @@ Guaranteed constraints:
 
 The number of the century the year is in.
 */
+'use strict';
+var expect = require('chai').expect;
 
 function centuryFromYear(year) {
     return Math.ceil(year/100)
 }
+
+describe('Test 1', function() {
+    it('should exist', function() {
+        expect(true).to.not.be.undefined;
+    });
+});
