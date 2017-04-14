@@ -4,7 +4,8 @@
   "description": "My Code Fights Arcade",
   "main": "add.js",
   "scripts": {
-    "test": "mocha 'src/**/*.js' --reporter=nyan"
+    "test": "nyc mocha 'src/**/*.js' --reporter=nyan",
+    "test:watch": "mocha 'src/**/*.js' --reporter=nyan --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/lucastaliberti/codefights#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0"
   }
 }
