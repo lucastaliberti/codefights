@@ -37,7 +37,7 @@ function adjacentElementsProduct(inputArray) {
   return Math.max(...arr);
 }
 
-describe('Intro Level1 - checkPalindrome', function () {
+describe('Intro Level2 - adjacentElementsProduct', function () {
 
   let inputArray = [3, 6, -2, -5, 7, 3]
   let expected = 21
