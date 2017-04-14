@@ -29,3 +29,13 @@ var expect = require('chai').expect;
 function add(param1, param2) {
     return param1 + param2
 }
+
+describe('Intro Level1 - add', function() {
+    it('1 + 2 = 3', function() {
+        expect(add(1, 2)).to.be.equal(3);
+    })
+
+    it('0 + 1000 = 1000', function() {
+        expect(add(0, 1000)).to.be.equal(1000);
+    })
+})

@@ -25,11 +25,15 @@ The number of the century the year is in.
 var expect = require('chai').expect;
 
 function centuryFromYear(year) {
-    return Math.ceil(year/100)
+    return Math.ceil(year / 100)
 }
 
-describe('Test 1', function() {
-    it('should exist', function() {
-        expect(true).to.not.be.undefined;
-    });
-});
+describe('Intro Level1 - centuryFromYear', function () {
+    it('year: 1905 century: 20', function () {
+        expect(centuryFromYear(1905)).to.be.equal(20);
+    })
+
+    it('year: 1700 century: 17', function () {
+        expect(centuryFromYear(1700)).to.be.equal(17);
+    })
+})
