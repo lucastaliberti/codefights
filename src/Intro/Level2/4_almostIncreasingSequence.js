@@ -30,14 +30,12 @@ Return true if it is possible to remove one element from the array in order to g
 const expect = require('chai').expect;
 
 function almostIncreasingSequence(sequence) {
-  return sequence.reduce(reducer, {})
+  return sequence.some((value, index, arr) => {
+    return arr
+      .filter((v, i) => i !== index)
+      .every((v2, i2, arr2) => (i2 > 0) ? v2 > arr2[i2 - 1] : true)
+  })
 }
-
-const reducer = (acc, value, index, arr) =>
-  (acc === true) ? true : arr
-    .filter((v, i) => i !== index)
-    .every((v2, i2, arr2) => (i2 > 0) ? v2 > arr2[i2 - 1] : true)
-
 
 describe('Intro Level2 - almostIncreasingSequence', function () {
   const tests = [
