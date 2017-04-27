@@ -44,28 +44,16 @@ function shapeArea(n) {
 
 describe('Intro Level2 - shapeArea', function () {
 
-  let input = 2
-  let expected = 5
-  it(`input: ${input}`, function () {
-    expect(shapeArea(input)).to.be.equal(expected);
-  })
+  const tests = [
+    { input: 2, expected: 5 },
+    { input: 3, expected: 13 },
+    { input: 1, expected: 1 },
+    { input: 5, expected: 41 }
+  ]
 
-  input = 3
-  expected = 13
-  it(`input: ${input}`, function () {
-    expect(shapeArea(input)).to.be.equal(expected);
+  tests.map((v) => {
+    it(`input: ${v.input}`, function () {
+      expect(shapeArea(v.input)).to.be.equal(v.expected);
+    })
   })
-
-  input = 1
-  expected = 1
-  it(`input: ${input}`, function () {
-    expect(shapeArea(input)).to.be.equal(expected);
-  })
-
-  input = 5
-  expected = 41
-  it(`input: ${input}`, function () {
-    expect(shapeArea(input)).to.be.equal(expected);
-  })
-
 })
