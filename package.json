@@ -5,6 +5,7 @@
   "main": "add.js",
   "scripts": {
     "test": "nyc mocha 'src/**/*.js' --reporter=nyan",
+    "test-coverage": "nyc --reporter=lcov --reporter=text-lcov mocha 'src/**/*.js'",
     "test:watch": "mocha 'src/**/*.js' --reporter=nyan --watch"
   },
   "repository": {
