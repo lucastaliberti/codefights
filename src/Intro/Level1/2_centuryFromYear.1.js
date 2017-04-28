@@ -21,19 +21,19 @@ Guaranteed constraints:
 
 The number of the century the year is in.
 */
-'use strict';
-var expect = require('chai').expect;
+'use strict'
+var expect = require('chai').expect
 
-function centuryFromYear(year) {
-    return Math.ceil(year / 100)
+function centuryFromYear (year) {
+  return Math.ceil(year / 100)
 }
 
 describe('Intro Level1 - centuryFromYear', function () {
-    it('year: 1905 century: 20', function () {
-        expect(centuryFromYear(1905)).to.be.equal(20);
-    })
+  it('year: 1905 century: 20', function () {
+    expect(centuryFromYear(1905)).to.be.equal(20)
+  })
 
-    it('year: 1700 century: 17', function () {
-        expect(centuryFromYear(1700)).to.be.equal(17);
-    })
+  it('year: 1700 century: 17', function () {
+    expect(centuryFromYear(1700)).to.be.equal(17)
+  })
 })

@@ -7,16 +7,16 @@ Example
 
 For
 
-matrix = [[0, 1, 1, 2], 
-          [0, 5, 0, 0], 
+matrix = [[0, 1, 1, 2],
+          [0, 5, 0, 0],
           [2, 0, 3, 3]]
 the output should be
 matrixElementsSum(matrix) = 9.
 
 Here's the rooms matrix with unsuitable rooms marked with 'x':
 
-[[x, 1, 1, 2], 
- [x, 5, x, x], 
+[[x, 1, 1, 2],
+ [x, 5, x, x],
  [x, x, x, x]]
 Thus, the answer is 1 + 5 + 1 + 2 = 9.
 
@@ -35,9 +35,9 @@ Guaranteed constraints:
 [output] integer
 */
 'use strict'
-const expect = require('chai').expect;
+const expect = require('chai').expect
 
-function matrixElementsSum(matrix) {
+function matrixElementsSum (matrix) {
   let hauntedColumns = []
   let toSum = 0
 
@@ -45,11 +45,9 @@ function matrixElementsSum(matrix) {
     return acc + value.reduce((a, b, i) => {
       toSum = 0
 
-      if (!hauntedColumns.includes(i))
-        toSum = b
+      if (!hauntedColumns.includes(i)) { toSum = b }
 
-      if (b === 0)
-        hauntedColumns.push(i)
+      if (b === 0) { hauntedColumns.push(i) }
 
       return a + toSum
     }, 0)
@@ -63,28 +61,31 @@ describe('Intro Level2 - matrixElementsSum', function () {
         [0, 1, 1, 2],
         [0, 5, 0, 0],
         [2, 0, 3, 3]
-      ], expected: 9
+      ],
+      expected: 9
     },
     {
       input: [
         [1, 1, 1, 0],
         [0, 5, 0, 1],
         [2, 1, 3, 10]
-      ], expected: 9
+      ],
+      expected: 9
     },
     {
       input: [
         [1, 1, 1],
         [2, 2, 2],
         [3, 3, 3]
-      ], expected: 18
+      ],
+      expected: 18
     },
     { input: [[0]], expected: 0 }
   ]
 
   tests.map((v) => {
     it(`input: ${v.input}`, function () {
-      expect(matrixElementsSum(v.input)).to.be.equal(v.expected);
+      expect(matrixElementsSum(v.input)).to.be.equal(v.expected)
     })
   })
 })

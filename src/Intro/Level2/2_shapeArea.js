@@ -11,7 +11,7 @@ A 1-interesting polygon is just a square with a side of length 1. An n-interesti
   _|_|_|_|■|_|_|_|■|■|■|_|_|_|■|■|■|■|■|_|_
   _|_|_|_|_|_|_|_|_|■|_|_|_|_|_|■|■|■|_|_|_
   _|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|■|_|_|_|_
-   | | | | | | | | | | | | | | | | | | | | 
+   | | | | | | | | | | | | | | | | | | | |
    n=1   n=2       n=3           n=4
 
 Example
@@ -32,18 +32,14 @@ Guaranteed constraints:
 
 The area of the n-interesting polygon.
 */
-'use strict';
-var expect = require('chai').expect;
+'use strict'
+var expect = require('chai').expect
 
-function shapeArea(n) {
-  if (n === 1)
-    return 1
-  else
-    return (n * n) + ((n - 1) * (n - 1))
+function shapeArea (n) {
+  if (n === 1) { return 1 } else { return (n * n) + ((n - 1) * (n - 1)) }
 }
 
 describe('Intro Level2 - shapeArea', function () {
-
   const tests = [
     { input: 2, expected: 5 },
     { input: 3, expected: 13 },
@@ -53,7 +49,7 @@ describe('Intro Level2 - shapeArea', function () {
 
   tests.map((v) => {
     it(`input: ${v.input}`, function () {
-      expect(shapeArea(v.input)).to.be.equal(v.expected);
+      expect(shapeArea(v.input)).to.be.equal(v.expected)
     })
   })
 })

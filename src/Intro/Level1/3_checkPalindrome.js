@@ -23,27 +23,24 @@ Guaranteed constraints:
 
 true if inputString is a palindrome, false otherwise.
 */
-'use strict';
-var expect = require('chai').expect;
+'use strict'
+var expect = require('chai').expect
 
-function checkPalindrome(inputString) {
-    return inputString === inputString.split("").reverse().join("")
+function checkPalindrome (inputString) {
+  return inputString === inputString.split('').reverse().join('')
 }
 
 describe('Intro Level1 - checkPalindrome', function () {
-    it('inputString: "aabaa"', function () {
-        expect(checkPalindrome('aabaa')).to.be.true;
-    })
+  const tests = [
+    { input: 'aabaa', expected: true },
+    { input: 'abac', expected: false },
+    { input: 'a', expected: true },
+    { input: 'az', expected: false }
+  ]
 
-    it('inputString: "abac"', function () {
-        expect(checkPalindrome('abac')).to.be.false;
+  tests.map((v) => {
+    it(`inputString: ${v.input}`, function () {
+      expect(checkPalindrome(v.input)).to.be.equal(v.expected)
     })
-
-    it('inputString: "a"', function () {
-        expect(checkPalindrome('a')).to.be.true;
-    })
-    
-    it('inputString: "az"', function () {
-        expect(checkPalindrome('az')).to.be.false;
-    })
+  })
 })

@@ -27,7 +27,7 @@ Guaranteed constraints:
 Return true if it is possible to remove one element from the array in order to get a strictly increasing sequence, otherwise return false.
 */
 'use strict'
-const expect = require('chai').expect;
+const expect = require('chai').expect
 
 // function almostIncreasingSequence(sequence) {
 //   return sequence.some((value, index, arr) => {
@@ -37,31 +37,31 @@ const expect = require('chai').expect;
 //   })
 // }
 
-function almostIncreasingSequence(s) {
-  var ssize = s.length;
-  var i = ssize;
-  var j;
+function almostIncreasingSequence (s) {
+  var ssize = s.length
+  var i = ssize
+  var j
   while (i--) {
-    var c = true;
-    j = ssize;
+    var c = true
+    j = ssize
     while (j--) {
       if (j < i || j > i + 1) {
         if (s[j] <= s[j - 1]) {
-          c = false;
-          break;
+          c = false
+          break
         }
-      } else if (j == i + 1) {
+      } else if (j === i + 1) {
         if (s[j] <= s[j - 2]) {
-          c = false;
-          break;
+          c = false
+          break
         }
       }
     }
     if (c) {
-      return true;
+      return true
     }
   }
-  return false;
+  return false
 }
 
 describe('Intro Level2 - almostIncreasingSequence', function () {
@@ -83,7 +83,7 @@ describe('Intro Level2 - almostIncreasingSequence', function () {
 
   tests.map((v) => {
     it(`input: ${v.input}`, function () {
-      expect(almostIncreasingSequence(v.input)).to.be.equal(v.expected);
+      expect(almostIncreasingSequence(v.input)).to.be.equal(v.expected)
     })
   })
 })
